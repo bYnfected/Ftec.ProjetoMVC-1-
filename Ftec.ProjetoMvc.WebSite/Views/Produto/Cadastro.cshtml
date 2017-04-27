@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="/Produto/Gravar" method="post">
+    <!--
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" />
+
+    <label for="preco">Preco</label>
+    <input type="text" id="preco" name="preco" />
+
+    <label for="quantidade">Quantidade</label>
+    <input type="text" id="quantidade" name="quantidade" />
+        -->
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="produto.Nome" class="form-control" />
+
+    <label for="preco">Preco</label>
+    <input type="text" id="preco" name="produto.Preco" class="form-control" />
+
+    <label for="quantidade">Quantidade</label>
+    <input type="text" id="quantidade" name="produto.Quantidade" class="form-control" />
+
+
+    <label for="categoria">Categoria</label>
+    <select id="categoria" name="CategoriaId" class="form-control" >
+        @foreach (var categoria in ViewBag.Categorias)
+        {
+            <option value=@categoria.Id>@categoria.Nome</option>
+        }
+                
+    </select>
+
+
+    <input type="submit" value="Gravar" class="form-control"  />
+
+</form>
+   

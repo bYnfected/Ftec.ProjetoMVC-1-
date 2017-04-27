@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="/Produto/Alterar" method="post">
+    lkjlwejqwlrk;erkwe;r
+    <input type="hidden" id="id" name="produto.Id" value="@ViewBag.Produto.Id" />
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" class="form-control" />
+    <br />
+    <label for="preco">Preco</label>
+    <input type="text" id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" class="form-control" />
+
+    <label for="quantidade">Quantidade</label>
+    <input type="text" id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" class="form-control" />
+
+    <label for="categoria">Categoria</label>
+    <select id="categoria" name="CategoriaId" class="form-control">
+        @foreach (var categoria in ViewBag.Categorias)
+        {
+            <option value=@categoria.Id>@categoria.Nome</option>
+        }
+
+    </select>
+
+
+    <input type="submit" value="Gravar" class="form-control" />
+
+</form>
