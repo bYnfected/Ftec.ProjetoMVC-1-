@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ftec.ProjetoMvc.WebSite.Filtro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace Ftec.ProjetoMvc.WebSite
     {
         protected void Application_Start()
         {
+            GlobalFilters.Filters.Add(new FiltroAcesso());
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

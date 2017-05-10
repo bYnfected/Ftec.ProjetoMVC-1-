@@ -12,6 +12,7 @@ namespace Ftec.ProjetoMvc.WebSite.Controllers
         public ActionResult Index()
         {
             return View();
+
         }
 
         public ActionResult Listar()

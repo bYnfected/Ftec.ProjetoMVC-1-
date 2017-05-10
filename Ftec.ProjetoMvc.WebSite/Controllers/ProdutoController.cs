@@ -12,7 +12,13 @@ namespace Ftec.ProjetoMvc.WebSite.Controllers
         // GET: Produto
         public ActionResult Index()
         {
-            if(Session["produtos"] == null)
+
+            if (Session["Usuario"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
+            if (Session["produtos"] == null)
             {
                 List<Produto> produtos = MockFactory.MockFactory.GerarListaProdutos(10);
                 Session["produtos"] = produtos;

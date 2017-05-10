@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div> 
+        <form action="@Url.Action("Autenticar", "Login")" method="post">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" class="form-control" />
+            <label for="senha">Senha</label>
+            <input type="text" id="senha" name="senha" class="form-control" />
+            <input type="submit" value="Logar" />   
+        </form>
+
+    </div>
+</body>
+</html>
